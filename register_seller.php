@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
     $password=$_POST['password'];
     $sql=mysqli_query($conn,"INSERT INTO register2(name,mobile,address,email,password) VALUES('$name','$mobile','$address','$email','$password')");
     $value=mysqli_insert_id($conn);
-    $sql1=mysqli_query($conn,"INSERT INTO login(login_id,user_name,password,user_type) VALUES('$value','$email','$password','buyer')");
+    $sql1=mysqli_query($conn,"INSERT INTO login(login_id,user_name,password,user_type) VALUES('$value','$email','$password','customer')");
     if($sql1)
     {
         echo'<script> alert("registered successfully");
@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Impact Bootstrap Template - Index</title>
+  <title>Welcome to eBay</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -109,8 +109,8 @@ if(isset($_POST['submit'])){
                   <li><a href="#">Deep Drop Down 5</a></li> -->
                 </ul>
               </li>
-              <li><a href="#">Register</a></li>
-              <li><a href="#">login</a></li>
+              <li><a href="register_customer.php">Register</a></li>
+              <li><a href="login.php">login</a></li>
               <!-- <li><a href="#">Drop Down 4</a></li> -->
             </ul>
           </li>
@@ -134,27 +134,28 @@ if(isset($_POST['submit'])){
         <form method="POST">
           <h3>Seller Registration</h3>
             <div class="mb-3">
-              <label  class="form-label">Email address</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label  class="form-label">Name</label>
+              <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
               <label  class="form-label">Mobile</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <input type="mobile" name="mobile" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3">
                 <label  class="form-label">Address</label>
-                <input type="text" class="form-control" id="exampleInputPassword1">
+                <input type="text" name="address" class="form-control" id="exampleInputPassword1">
               </div>
               <div class="mb-3">
                 <label  class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleInputPassword1">
+                <input type="email" name="email" class="form-control" id="exampleInputPassword1">
               </div>
               <div class="mb-3">
                 <label  class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-              </div>
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+              </div>         
+              <a href="login.php">Already Exists as Seller</a><br>
+            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+         
           </form>
     </div>
 

@@ -12,9 +12,9 @@ $sql1=mysqli_query($conn,"SELECT product.p_name,product.p_price,product.p_brand,
         echo '<script> alert("something went wrong");</script>';
 
     }
-  else{
-    $sql1=mysqli_query($conn,"SELECT product.p_name,product.p_price,product.p_brand,product.image FROM product INNER JOIN cart WHERE product.p_id=cart.p_id");
-  }
+  // else{
+  //   $sql1=mysqli_query($conn,"SELECT product.p_name,product.p_price,product.p_brand,product.image FROM product INNER JOIN cart WHERE product.p_id=cart.p_id");
+  // }
 
 ?>
 
@@ -29,7 +29,7 @@ $sql1=mysqli_query($conn,"SELECT product.p_name,product.p_price,product.p_brand,
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Impact Bootstrap Template - Index</title>
+  <title>Welcome to eBay</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -85,16 +85,16 @@ $sql1=mysqli_query($conn,"SELECT product.p_name,product.p_price,product.p_brand,
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Impact<span>.</span></h1>
+        <h1>eBay<span>.</span></h1>
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#hero">Home</a></li>
+        <li><a href="user_home.php">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <!-- <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="blog.html">Blog</a></li> -->
           <li class="dropdown"><a href="#"><span>Product</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="view_product_customer.php">View Product</a></li>
@@ -112,7 +112,7 @@ $sql1=mysqli_query($conn,"SELECT product.p_name,product.p_price,product.p_brand,
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="logout.php" class="btn btn-danger">Logout</a></li>
         </ul>
       </nav><!-- .navbar -->
 

@@ -55,7 +55,7 @@ if(isset($_POST['submit'])){
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Impact Bootstrap Template - Index</title>
+  <title>Welcome to eBay</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -135,10 +135,10 @@ if(isset($_POST['submit'])){
               </li>
               <li><a href="add_product_seller.php">Add Product</a></li>
               <li><a href="view_product_seller.php">View Product</a></li>
-              <li><a href="remove_product_seller.php">Remove Product</a></li>
+             
             </ul>
           </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="logout.php" class="btn btn-danger">Logout</a></li>
         </ul>
       </nav><!-- .navbar -->
 

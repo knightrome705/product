@@ -51,7 +51,7 @@ if(isset($_POST['submit'])){
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Impact Bootstrap Template - Index</title>
+  <title>Welcome to eBay</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -107,34 +107,34 @@ if(isset($_POST['submit'])){
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Impact<span>.</span></h1>
+        <h1>eBay<span>.</span></h1>
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="register_seller.php">Become a seller</a></li>
-          <!-- <li><a href="#about">About</a></li>
+          <li><a href="seller_home.php">Home</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <!-- <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="blog.html">Blog</a></li> -->
-          <li class="dropdown"><a href="#"><span>Join us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown"><a href="#"><span>Product</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <!-- <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a> -->
-                <ul>
-                  <!-- <li><a href="#">Deep Drop Down 1</a></li>
+                <!-- <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
                   <li><a href="#">Deep Drop Down 2</a></li>
                   <li><a href="#">Deep Drop Down 3</a></li>
                   <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li> -->
-                </ul>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul> -->
               </li>
-              <li><a href="register_costumer.php">Register</a></li>
-              <li><a href="login.php">login</a></li>
-              <!-- <li><a href="#">Drop Down 4</a></li> -->
+              <li><a href="add_product_seller.php">Add Product</a></li>
+              <li><a href="view_product_seller.php">View Product</a></li>
+              <!-- <li><a href="remove_product_seller.php">Remove Product</a></li> -->
             </ul>
           </li>
-          <!-- <li><a href="#contact">Contact</a></li> -->
+          <li><a href="logout.php" class="btn btn-danger">Logout</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -142,7 +142,7 @@ if(isset($_POST['submit'])){
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
     </div>
-  </header><!-- End Header -->
+  </header>
   <!-- End Header -->
   <section>
 <div class="container">

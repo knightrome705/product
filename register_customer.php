@@ -29,7 +29,7 @@ if(isset($_POST['submit'])){
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Impact Bootstrap Template - Index</title>
+  <title>Welcome to eBay</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -89,7 +89,7 @@ if(isset($_POST['submit'])){
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="register_costumer.php">Become a seller</a></li>
+          <li><a href="register_seller.php">Become a seller</a></li>
           <!-- <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
@@ -108,7 +108,7 @@ if(isset($_POST['submit'])){
                 </ul>
               </li>
               <li><a href="register_seller.php">Register</a></li>
-              <li><a href="#">login</a></li>
+              <li><a href="login.php">login</a></li>
               <!-- <li><a href="#">Drop Down 4</a></li> -->
             </ul>
           </li>

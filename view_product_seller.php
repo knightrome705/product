@@ -11,7 +11,7 @@ $sql=mysqli_query($conn,"SELECT * FROM product");
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Impact Bootstrap Template - Index</title>
+  <title>Welcome to eBay</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -54,8 +54,8 @@ $sql=mysqli_query($conn,"SELECT * FROM product");
   <section id="topbar" class="topbar d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">knightrome705@gmail.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 9605312493</span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -72,16 +72,16 @@ $sql=mysqli_query($conn,"SELECT * FROM product");
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Impact<span>.</span></h1>
+        <h1>eBay<span>.</span></h1>
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#hero">Home</a></li>
+        <li><a href="seller_home.php">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <!-- <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="blog.html">Blog</a></li> -->
           <li class="dropdown"><a href="#"><span>Product</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <!-- <li><a href="#">Drop Down 1</a></li>
@@ -99,7 +99,7 @@ $sql=mysqli_query($conn,"SELECT * FROM product");
               <!-- <li><a href="#">Drop Down 4</a></li> -->
             </ul>
           </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="logout.php" class="btn btn-danger">Logout</a></li>
         </ul>
       </nav><!-- .navbar -->
 
