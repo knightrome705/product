@@ -1,6 +1,6 @@
 <?php
-include "connection.php";
 session_start();
+include "connection.php";
 if(isset($_POST['login'])){
     $username=$_POST['email'];
     $password=$_POST['password'];
@@ -8,16 +8,26 @@ if(isset($_POST['login'])){
     if($result){
         $row=mysqli_fetch_assoc($result);
         $count=mysqli_num_rows($result);
-        if($count==1){
+        $user_type=$row['user_type'];
+        if($count==1 && $user_type=="buyer"){
             $_SESSION['id']=$row['login_id'];
-        }
-        ?>
-        <script>
+            ?> 
+            <script>
             window.location.assign('user_home.php');
-        </script>
-        <?php
+           </script>
+           <?php
+        }
+        }
+        if($count==1 && $user_type=="seller"){
+          $_SESSION['id']=$row['login_id'];
+        ?>
+          <script>
+          window.location.assign('seller_home.php');
+         </script>';
+         <?php
+      }
     }
-}
+
 ?>
 
 
@@ -105,8 +115,8 @@ if(isset($_POST['login'])){
                   <li><a href="#">Deep Drop Down 5</a></li> -->
                 </ul>
               </li>
-              <li><a href="#">Register</a></li>
-              <li><a href="#">login</a></li>
+              <li><a href="register_customer.php">Register</a></li>
+              <li><a href="register_customer.php">login</a></li>
               <!-- <li><a href="#">Drop Down 4</a></li> -->
             </ul>
           </li>

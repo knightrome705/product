@@ -110,6 +110,7 @@ $sql=mysqli_query($conn,"SELECT * FROM product");
   </header><!-- End Header -->
   <!-- End Header -->
   <section>
+  <form method="POST" action="view_cart_customer.php">
   <?php
   while($row=mysqli_fetch_assoc($sql)){
     ?>
@@ -137,6 +138,12 @@ $sql=mysqli_query($conn,"SELECT * FROM product");
 <?php
 }
 ?>
+
+
+
+
+
+  </form>
 
 
 

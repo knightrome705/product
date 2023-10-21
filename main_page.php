@@ -83,7 +83,7 @@
                   <li><a href="#">Deep Drop Down 5</a></li> -->
                 </ul>
               </li>
-              <li><a href="register_costumer.php">Register</a></li>
+              <li><a href="register_customer.php">Register</a></li>
               <li><a href="login.php">login</a></li>
               <!-- <li><a href="#">Drop Down 4</a></li> -->
             </ul>

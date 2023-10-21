@@ -1,26 +1,18 @@
 <?php
+session_start();
 include "connection.php";
+if(!isset($_SESSION['id'])){
+  header('location:login.php');
+}else{
+$user_id=$_SESSION['id'];
 $id=$_GET['id'];
-// var_dump($id);
-$sql=mysqli_query($conn,"INSERT INTO cart(p_id) VALUES ('$id')");
-$sql1=mysqli_query($conn,"SELECT product.p_name,product.p_price,product.p_brand,product.image FROM product LEFT JOIN cart WHERE product.p_id=cart.p_id");
-    if($sql1)
-    {
-         echo '<script> alert("Added to cart");window.location.href="product.php";</script>';
-    }
-    else{
-        echo '<script> alert("something went wrong");</script>';
+mysqli_query($conn,"INSERT INTO cart(p_id,id) VALUES ('$id','$user_id')");
+$data=mysqli_query($conn,"SELECT product.p_name,product.p_price,product.p_brand,product.image FROM cart INNER JOIN product ON cart.p_id=product.p_id WHERE cart.id='$user_id'ORDER BY cart.c_id DESC");
 
-    }
-  // else{
-  //   $sql1=mysqli_query($conn,"SELECT product.p_name,product.p_price,product.p_brand,product.image FROM product INNER JOIN cart WHERE product.p_id=cart.p_id");
-  // }
+
+
 
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,8 +59,8 @@ $sql1=mysqli_query($conn,"SELECT product.p_name,product.p_price,product.p_brand,
   <section id="topbar" class="topbar d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">knightrome705@gmail.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 9605312493</span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -140,29 +132,26 @@ $sql1=mysqli_query($conn,"SELECT product.p_name,product.p_price,product.p_brand,
     <th>
         Product Image
     </th>
-    <th>
-        Actions
-    </th>
+    
 </tr>
-<?php
-while($row=mysqli_fetch_assoc($sql)){
-?>
+<?php 
+while($row=mysqli_fetch_assoc($data))
+{
+  ?>
 <tr>
     <td><?php echo $row['p_name'];?></td>
     <td><?php echo $row['p_price'];?></td>
     <td><?php echo $row['p_brand'];?></td>
     
     <td><img src="./image/<?php echo $row['image'];?>" alt="image" height="50px" width="40px"></td>
-    <td>
-      <a href="remove_product.php?id=<?php echo $row['p_id'];?>" class="btn btn-danger">Delete</a>
-
-    </td>
+    
 
 </tr>
-<?php } ?>
-
-
+<?php
+}
+?>
     </table>
+    
 
 
 
@@ -190,3 +179,9 @@ while($row=mysqli_fetch_assoc($sql)){
 </body>
 
 </html>
+<?php
+}
+
+
+
+?>

@@ -84,7 +84,7 @@
                 </ul> -->
               </li>
               <li><a href="view_product_customer.php">View Product</a></li>
-              <li><a href="view_cart_customer.php">Cart</a></li>
+              <!-- <li><a href="view_cart_customer.php">Cart</a></li> -->
               <!-- <li><a href="#">Drop Down 4</a></li> -->
             </ul>
           </li>

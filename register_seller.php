@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
     $password=$_POST['password'];
     $sql=mysqli_query($conn,"INSERT INTO register2(name,mobile,address,email,password) VALUES('$name','$mobile','$address','$email','$password')");
     $value=mysqli_insert_id($conn);
-    $sql1=mysqli_query($conn,"INSERT INTO login(login_id,user_name,password,user_type) VALUES('$value','$email','$password','customer')");
+    $sql1=mysqli_query($conn,"INSERT INTO login(login_id,user_name,password,user_type) VALUES('$value','$email','$password','seller')");
     if($sql1)
     {
         echo'<script> alert("registered successfully");
